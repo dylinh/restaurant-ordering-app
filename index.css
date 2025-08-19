@@ -1,3 +1,87 @@
 body {
     margin: 0;
+    width: 600px;
 } 
+
+header {
+    background-image: url("/images/burger.jpg");
+    background-position-y: 65%;
+    background-position-x: 65%;
+    height: 167px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.heading{
+    color: white;
+    font-family: "Smythe";
+    margin-left: 46.07px;
+}
+
+h1 {
+    font-size: 39px;
+    margin: 0;
+}
+
+.heading h2{
+    font-size: 22px;
+    margin: 0;
+}
+
+.menu-item{
+    display: flex;
+    margin-left: 46px;
+    margin-right: 46px;
+    height: 140px;
+    border-bottom: solid 1px #D2D2D2;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.menu-item button:hover{
+    background-color: #d2d2d2e0;
+}
+
+p{
+    margin: 0;
+}
+
+.emoji{
+    font-size: 78px;
+}
+
+.add-item{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: solid 1.5px #DEDEDE;
+    background: white;
+    font-size: 25px;
+    cursor: pointer;
+    font-family: "";
+}
+
+.item-desc{
+    font-family: "Smythe"
+}
+
+.item-start{
+    display: flex;
+    align-items: center;
+}
+
+.item-name{
+    font-size: 28px;
+}
+
+.item-ingredients{
+    color: #8B8B8B;
+    margin-bottom: 8px;
+}
+
+.item-price{
+    font-size: 20px;
+}
