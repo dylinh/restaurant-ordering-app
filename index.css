@@ -173,7 +173,7 @@ hr{
 .pay-modal{
     font-family: "Verdana";
     width: 524px;
-    margin: 30px auto 30px auto;
+    margin: auto;
     padding-bottom: 30px;
     box-shadow: 0px 0px 12px 5px #969696;
     border-radius: 3.89px;
