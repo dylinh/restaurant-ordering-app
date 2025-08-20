@@ -4,6 +4,7 @@ const mainEl = document.getElementById("main-items")
 const orderEl = document.getElementById("order-items")
 const paymentModal = document.getElementById('pay-modal')
 let itemArr = []
+let modalOpen = false
 
 renderMenu()
 
@@ -75,12 +76,6 @@ function renderOrder(){
     `<div id="complete-container" class="complete-btn-container">
         <button id="complete" class="complete-btn">Complete Order</button>
     </div>`
-    let completeEl = document.getElementById("complete")
-
-    completeEl.addEventListener("click", () => {
-            paymentModal.classList.toggle("pay-hide")
-    
-        })
 
 }
 
@@ -93,6 +88,13 @@ orderEl.addEventListener('click', (e) => {
         targetIndex = itemArr.findIndex((item) => {
             return item === e.target.id
         })
+    }
+
+    if (e.target.id === "complete"){
+        if (!modalOpen){
+            paymentModal.classList.toggle("pay-hide")
+            modalOpen = true
+        }
     }
 
     itemArr = itemArr.filter((item, index) => {
@@ -115,5 +117,6 @@ paymentEl.addEventListener("submit", (e) => {
     paymentModal.classList.toggle("pay-hide")
     orderEl.innerHTML = `<p class="order-submit">Thanks, Your order is on its way!</p>`
     itemArr = []
+    modalOpen = false
     paymentEl.reset()
 })

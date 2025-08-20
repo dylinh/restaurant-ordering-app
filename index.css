@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     width: 600px;
 } 
 
@@ -32,8 +32,7 @@ h1 {
 
 .menu-item{
     display: flex;
-    margin-left: 46px;
-    margin-right: 46px;
+    margin: 0 46px;
     height: 140px;
     border-bottom: solid 1px #D2D2D2;
     align-items: center;
@@ -84,4 +83,160 @@ p{
 
 .item-price{
     font-size: 20px;
+}
+
+.order-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Smythe";
+    margin: 0 46px 22px 46px;
+}
+
+.order-item-desc{
+    display: flex;
+}
+
+.order-item-name{
+    font-size: 28px;
+}
+
+.remove-btn{
+    background-color: white;
+    border: none;
+    color: #BBBBBB;
+    margin-left: 13px;
+    cursor: pointer;
+}
+
+.remove-btn:hover{
+    color: #969494e1;
+}
+
+.your-order{
+    margin: 45px 0 60px 0;
+}
+
+.center-util{
+    display: flex;
+    justify-content: center;
+}
+
+.font-util{
+    font-family: "Smythe";
+    font-size: 28px;
+}
+
+.font-util-two{
+    font-size: 22px;
+    font-family: "Smythe";
+}
+
+.total-price{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 46px;
+}
+
+hr{
+    border: solid 1px #393333;
+    margin: 0 46px 14px 46px;
+}
+
+.complete-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Verdana";
+    width: 100%;
+    border-radius: 3px;
+    background-color: #16db99;
+    color: white;
+    line-height: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 18px 0;
+    font-size: 16px;
+    border: none;
+}
+
+.complete-btn:hover{
+    background-color: #13b17c;
+}
+
+.complete-btn-container{
+    display: flex;
+    justify-content: center;
+    margin: 53px 46px;
+}
+
+.pay-modal{
+    font-family: "Verdana";
+    width: 524px;
+    margin: 30px auto 30px auto;
+    padding-bottom: 30px;
+    box-shadow: 0px 0px 12px 5px #969696;
+    border-radius: 3.89px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    height: 450px; 
+}
+
+form p {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 47px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    width:85%;
+    margin: 0 23px 23px 23px;
+    padding: 17px 0 18px 26px;
+    font-size: 20px;
+    border: solid 1.3px #757575;
+    border-radius: 3.89px;
+}
+
+form button {
+    margin-top: 15px;
+    width: 90%;
+    font-size: 20px;
+    padding: 17px 0;
+    background-color: #16DB99;
+    color: white;
+    font-weight: bold;
+    border-radius: 3.89px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: #13b17c;
+}
+
+.pay-hide{
+    display: none;
+}
+
+.order-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Smythe";
+    border-radius: 3px;
+    background-color: #ECFDF5;
+    color: #065F46;
+    font-size: 32px;
+    margin: 45px 50px;
+    height: 120px;
 }
