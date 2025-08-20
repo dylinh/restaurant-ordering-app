@@ -32,20 +32,19 @@ function renderMenu(){
 }
 
 mainEl.addEventListener('click', (e) => {
-     if (e.target.id){
-        itemArr.push(e.target.id)
+     if (e.target.classList.contains("add-item")){
+        if (!modalOpen) {
+            itemArr.push(e.target.id)
+            renderOrder()
+        }
      }
-     if (e.target.id && itemArr.length > 0){
-        renderOrder()
-     }
+
 })
 
 // I need to render all of the items in the array. I have the ID's of each element. 
 // I need to use the ID's to find the corresponding object with that ID. I think I can use find()
 // Then I will render everything 
 function renderOrder(){
-    let totalCost = 0
-
     const selectedItemsArr = itemArr.map((id) => {
         return menuArray.find((item) => item.id.toString() === id)
     }).filter(item => item !== undefined)
@@ -65,7 +64,7 @@ function renderOrder(){
     const totalPrice = selectedItemsArr.reduce((acc, item) => {
         return acc += item.price
     }, 0)
-
+    
     orderEl.innerHTML = `<p class="center-util font-util your-order">Your Order</p>` 
     + selectedItemsEl + 
     `<hr>` + 
@@ -85,10 +84,11 @@ orderEl.addEventListener('click', (e) => {
     // Find the first index of the item to be deleted, then filter that items index out of the array.
     let targetIndex
     if (e.target.id){
+        if (!modalOpen) {
         targetIndex = itemArr.findIndex((item) => {
             return item === e.target.id
         })
-    }
+    }}
 
     if (e.target.id === "complete"){
         if (!modalOpen){
@@ -101,9 +101,10 @@ orderEl.addEventListener('click', (e) => {
         return index !== targetIndex
     })
 
-    // If the array is empty clear out any rendering, otherwise re-render the order.
+    // If the array is empty clear out any rendering, otherwise re-render the order.    
     if (itemArr.length === 0){
-        orderEl.innerHTML = ""
+        if (!document.getElementById("submit-order")){
+            orderEl.innerHTML = ""}
     } else {
         renderOrder()
     }
@@ -115,8 +116,9 @@ let paymentEl = document.getElementById("payment-form")
 paymentEl.addEventListener("submit", (e) => {
     e.preventDefault()
     paymentModal.classList.toggle("pay-hide")
-    orderEl.innerHTML = `<p class="order-submit">Thanks, Your order is on its way!</p>`
+    orderEl.innerHTML = `<div id="submit-order" class="order-submit-container"><p class="order-submit">Thanks, Your order is on its way!</p></div>`
     itemArr = []
     modalOpen = false
     paymentEl.reset()
 })
+
