@@ -3,6 +3,7 @@
 <br>
 [Link to Project](https://coruscating-croquembouche-95fffc.netlify.app/)
 
-Notes: Vanilla JS rendering, event listeners, CSS practice, JS methods (filter, map, reduce, findIndex). I could clean up the CSS, make the functions more pure, improve overall ID logic. Will use TS on future (larger) projects, ran into preventable bugs.
+Skills: Vanilla JS rendering, event listeners, CSS practice, JS methods (filter, map, reduce, findIndex).
+Potential Improvements: Make it responsive, clean up logic + code
 
 Completed on August 20, 2025
